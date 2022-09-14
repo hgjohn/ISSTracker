@@ -79,7 +79,6 @@ def find_best_sighting(city, state):
     date_time = datetime.strptime(str(date_datetime_str), '%Y-%m-%d %H:%M')
     unix_time = int(datetime.timestamp(date_time))
 
-    #
     parse_weather = requests.get(url_weather)
     weather_json = parse_weather.json()
     weather_len = len(weather_json['list'])
@@ -107,5 +106,3 @@ find_best_sighting('eugene', 'oregon')
 find_best_sighting('portland', 'oregon')
 find_best_sighting('bend','oregon')
 find_best_sighting('newport', 'oregon')
-#find_best_sighting('boise', 'idaho')
-#find_best_sighting('rochester', 'minnesota')
